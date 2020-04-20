@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+html {
+  --bg-color: hsl(0, 0%, 100%);
+  --top-bg-pattern: hsl(225, 100%, 98%);
+  --card-bg: hsl(227, 47%, 96%);
+  --normal-text: hsl(228, 12%, 44%);
+  --large-text: hsl(230, 17%, 14%);
+  --toggle: hsl(230, 22%, 74%);
+}
+
+html[data-theme=dark] {
+  --bg-color: hsl(230, 17%, 14%);
+  --top-bg-pattern: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --normal-text: hsl(228, 34%, 66%);
+  --large-text: hsl(0, 0%, 100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--large-text);
+  font-family: inherit;
+}
+
+p, span {
+  color: var(--normal-text);
+  font-family: inherit;
+}
+
+.header {
+  height: 40vh;
+  padding-top: 30px;
+  background: var(--top-bg-pattern);
+}
+.header #title {
+  padding: 10px;
+}
+.header #title p {
+  font-weight: 400;
+  font-size: 17px;
+}
+.header #toggler {
+  display: flex;
+  margin: auto;
+}
+.header #toggler #label {
+  padding-right: 10px;
+}
+
+html {
+  --toggle: hsl(230, 22%, 74%);
+}
+
+html[data-theme=dark] {
+  --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: #aeb3cb;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--bg-color);
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--toggle);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+.fixed-cards {
+  position: relative;
+  top: -5em;
+}
+
+.card {
+  background: var(--card-bg);
+}
+.card .card-footer {
+  background: var(--card-bg);
+  border: none;
+}
+
+/*# sourceMappingURL=main.css.map */

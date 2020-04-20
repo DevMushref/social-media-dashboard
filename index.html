@@ -1,48 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Social Media Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="sass/css/main.css"/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div id="title" class="col-10">
+          <h2>
+            <strong> Social Media Dashboard </strong>
+          </h2>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div id="toggler" class="col-2">
+          <span id="label">
+            <span id="light-dark">Dark</span> Mode
+          </span>
+          <input type="checkbox" id="switch" name="theme" />
+          <label for="switch">Toggle</label>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  Social Media Dashboard
-  Total Followers: 23,004
-
-  Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
+  <div class="fixed-cards container p-2">
+    <div class="card-deck text-center">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted"> @nathanf </h6>
+          <h5 class="card-title"> 1987 </h5>
+          <p class="card-text"> Followers </p>
+        </div>
+        <div class="card-footer text-muted">
+          12 Today
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted"> @nathanf </h6>
+          <h5 class="card-title"> 1044 </h5>
+          <p class="card-text"> Followers </p>
+        </div>
+        <div class="card-footer text-muted">
+          99 Today
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted"> @realnathanf </h6>
+          <h5 class="card-title"> 11k </h5>
+          <p class="card-text"> Followers </p>
+        </div>
+        <div class="card-footer text-muted">
+          1099 Today
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted"> Nathan F. </h6>
+          <h5 class="card-title"> 8239 </h5>
+          <p class="card-text"> Subscribers </p>
+        </div>
+        <div class="card-footer text-muted">
+          144 Today
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   Overview - Today
@@ -79,9 +113,30 @@
   1407
   12%
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+  var checkbox = document.querySelector('input[name=theme]');
+
+  let trans = () => {
+      document.documentElement.classList.add('transition');
+      window.setTimeout(() => {
+        document.documentElement.classList.remove('transition');
+      }, 1000);
+    }
+
+  checkbox.addEventListener('change', function() {
+    if(this.checked) {
+      trans();
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.getElementById('light-dark').innerHTML="Light";
+    } else {
+      trans();
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.getElementById('light-dark').innerHTML="Dark";
+    }
+  });
+</script>
 </body>
 </html>

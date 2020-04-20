@@ -1,0 +1,8 @@
+// Dark mode
+html[data-theme='dark'] {
+    --bg-color: hsl(230, 17%, 14%); // BG color
+    --top-bg-pattern: hsl(232, 19%, 15%); // Top BG Pattern
+    --card-bg: hsl(228, 28%, 20%); // Card BG
+    --normal-text: hsl(228, 34%, 66%); // Text
+    --large-text: hsl(0, 0%, 100%); // Text
+}

@@ -1,0 +1,43 @@
+// Theming
+@import './global/light';
+@import './global/dark';
+@import './global/font';
+
+// Primary colors:
+
+$lime-green: hsl(163, 72%, 41%);
+$bright-red: hsl(356, 69%, 56%);
+
+$facebook: hsl(195, 100%, 50%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to bottom, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+
+// This is the "transiion" that was created in the Javascript code in index.html file.
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--large-text);
+    font-family: inherit;
+}
+
+p, span {
+    color: var(--normal-text);
+    font-family: inherit;
+}
+
+// Other styles - Elements
+@import 'header';   // Header
+@import 'toggler';  // Dark mode toggler
+@import 'cards';    // Top cards

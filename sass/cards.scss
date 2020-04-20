@@ -1,0 +1,12 @@
+.fixed-cards {
+    position: relative;
+    top: -5em;
+}
+
+.card {
+    background: var(--card-bg);
+    .card-footer {
+        background: var(--card-bg);
+        border: none;
+    }
+}

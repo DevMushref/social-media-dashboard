@@ -1,0 +1,20 @@
+.header {
+    height: 40vh;
+    padding-top: 30px;
+    background: var(--top-bg-pattern);
+        #title {
+            padding: 10px;
+            p {
+                font-weight: 400;
+                font-size: 17px;
+            }
+        }
+
+        #toggler {
+            display: flex;
+            margin: auto;
+            #label {
+                padding-right: 10px;
+            }
+        }
+}
