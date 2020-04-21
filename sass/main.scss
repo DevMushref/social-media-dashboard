@@ -1,6 +1,5 @@
 // Theming
-@import './global/light';
-@import './global/dark';
+@import './global/mode';
 @import './global/font';
 
 // Primary colors:
@@ -8,10 +7,10 @@
 $lime-green: hsl(163, 72%, 41%);
 $bright-red: hsl(356, 69%, 56%);
 
-$facebook: hsl(195, 100%, 50%);
-$twitter: hsl(203, 89%, 53%);
-$instagram: linear-gradient(to bottom, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-$youTube: hsl(348, 97%, 39%);
+$facebook: hsl(203, 89%, 53%);
+$twitter: hsl(195, 100%, 50%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youtube: hsl(348, 97%, 39%);
 
 // This is the "transiion" that was created in the Javascript code in index.html file.
 html.transition,

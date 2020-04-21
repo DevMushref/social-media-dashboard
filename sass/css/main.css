@@ -111,15 +111,59 @@ label:active:after {
 
 .fixed-cards {
   position: relative;
-  top: -5em;
+  top: -8em;
 }
-
-.card {
-  background: var(--card-bg);
-}
-.card .card-footer {
+.fixed-cards .card {
   background: var(--card-bg);
   border: none;
+  overflow: hidden;
+  position: relative;
+}
+.fixed-cards .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(to right, #fdc468, #df4996);
+  height: 5px;
+}
+.fixed-cards .card .card-title {
+  font-size: 70px;
+  font-weight: 700;
+}
+.fixed-cards .card .card-subtitle {
+  color: var(--normal-text);
+}
+.fixed-cards .card .card-text {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+.fixed-cards .card .card-footer {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 8px;
+}
+.fixed-cards .card:nth-child(1):before {
+  content: "";
+  background: #1ca0f2;
+}
+.fixed-cards .card:nth-child(2):before {
+  content: "";
+  background: deepskyblue;
+}
+.fixed-cards .card:nth-child(3):before {
+  content: "";
+  background: linear-gradient(to right, #fdc468, #df4996);
+}
+.fixed-cards .card:nth-child(4):before {
+  content: "";
+  background: #c4032a;
 }
 
 /*# sourceMappingURL=main.css.map */

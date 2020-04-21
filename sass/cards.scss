@@ -1,12 +1,67 @@
 .fixed-cards {
     position: relative;
-    top: -5em;
-}
-
-.card {
-    background: var(--card-bg);
-    .card-footer {
+    top: -8em;
+    .card {
         background: var(--card-bg);
         border: none;
+        overflow: hidden;
+        position: relative;
+
+        &:before {
+            content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: 8px 8px 0 0;
+                background: $instagram;
+                height: 5px;
+        }
+
+        .card-title {
+            font-size: 70px;
+            font-weight: 700;
+        }
+        .card-subtitle {
+            color: var(--normal-text);
+        }
+        .card-text {
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            line-height: 0;
+        }
+        .card-footer {
+            background: var(--card-bg);
+            border: none; // This disables the default border of "card footer" of bootstrap 4
+            border-radius: 8px;
+        }
+        &:nth-child(1) { // 1st Card
+            &:before {
+                content: '';
+                background: $facebook;
+            }
+        }
+        &:nth-child(2) { // 2nd Card
+            &:before {
+                content: '';
+                background: $twitter;
+            }
+        }
+        &:nth-child(3) { // 3rd Card
+
+            &:before {
+                content: '';
+                background: $instagram;
+            }
+        }
+        &:nth-child(4) { // 4th Card
+            &:before {
+                content: '';
+                background: $youtube;
+            }
+        }
     }
 }
